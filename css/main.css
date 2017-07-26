@@ -64,16 +64,16 @@ form * {
 #submitButton {
 	flex: 1 1 15%;
 	border: none;
-	background: #ffc400;
+	background: #FFAB00;
 	color: white;
 	font-weight: 700;
 	transition: all 0.2s ease-in-out;
 }
 #submitButton:hover {
-	background: #ffd740;
+	background: #FFC400;
 }
 #submitButton:active {
-	background: #ffc400;
+	background: #FFAB00;
 }
 main {
 	background: #B2EBF2;
