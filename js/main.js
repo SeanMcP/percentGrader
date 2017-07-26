@@ -4,8 +4,9 @@ let button = document.getElementById('submitButton');
 
 // Gets height of <header> element
 let headerHeight = document.getElementById("mainHeader").offsetHeight;
+
 // Sets padding of <main> to height of <header>
-document.getElementById("mainContent").style.paddingTop = headerHeight;
+document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
 
 let ogState = document.getElementById("output");
 
@@ -18,7 +19,7 @@ submitButton.addEventListener('click', function(e) {
 
   if (denom <= 0) {
     alert("Please choose a number greater than zero");
-  } else if (denom > 500){
+  } else if (denom > 1000){
     alert("Too big to compute! Please choose a smaller number")
   } else {
     for (let i = denom; i >= 0; i--) {

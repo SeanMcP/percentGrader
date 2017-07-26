@@ -24,11 +24,12 @@ header {
 	background: #666;
 	height: 100px;
 	margin: 0.25em 0 0;
+	display: none;
 }
 #logo {
 	text-align: center;
 	font-size: 2.5em;
-	padding: 0.25em 0;
+	padding: 0 0 0.1em;
 }
 #logo a {
 	font-family: 'Boogaloo', cursive;
@@ -68,6 +69,7 @@ form * {
 	color: white;
 	font-weight: 700;
 	transition: all 0.2s ease-in-out;
+	min-width: 50px;
 }
 #submitButton:hover {
 	background: #FFC400;
@@ -77,12 +79,12 @@ form * {
 }
 main {
 	background: #B2EBF2;
-	padding: 220px 0 0.5em;
+	padding: default 0 0.5em;
 	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 #infoHide {
 	margin: 1em;
-	padding: 1em 0 0;
+	padding: 0.5em 0;
 }
 #infoHide li {
 	margin: .75em 0;
