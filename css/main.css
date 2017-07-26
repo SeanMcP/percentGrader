@@ -1,0 +1,114 @@
+body {
+	background: #333;
+	margin: 0;
+	padding: 0;
+}
+* {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+strong {
+	font-weight: 700;
+}
+header {
+	padding: 0.5em 2%;
+	background: #00ACC1;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	position: fixed;
+	width: 96%;
+}
+#ad {
+	flex: 1 1 90%;
+	background: #666;
+	height: 100px;
+	margin: 0.25em 0 0;
+}
+#logo {
+	text-align: center;
+	font-size: 2.5em;
+	padding: 0.25em 0;
+}
+#logo a {
+	font-family: 'Boogaloo', cursive;
+	font-weight: normal;
+	color: white;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	text-decoration: none;
+}
+#logo a:hover {
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+form {
+	display: flex;
+	flex-flow: row nowrap;
+}
+form * {
+	padding: 0.75em;
+	margin: 0 0 0.25em;
+	flex: 1 1 100%;
+	font-size: 1em;
+	overflow: hidden;
+	border: none;
+	border-radius: 0.25em;
+}
+#divisor {
+	flex: 1 1 50%;
+}
+#placeValues {
+	flex: 1 1 35%;
+	margin-left: 0.75em;
+	margin-right: 0.75em;
+}
+#submitButton {
+	flex: 1 1 15%;
+	border: none;
+	background: #ffc400;
+	color: white;
+	font-weight: 700;
+	transition: all 0.2s ease-in-out;
+}
+#submitButton:hover {
+	background: #ffd740;
+}
+#submitButton:active {
+	background: #ffc400;
+}
+main {
+	background: #B2EBF2;
+	padding: 220px 0 0.5em;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+#infoHide {
+	margin: 1em;
+	padding: 1em 0 0;
+}
+#infoHide li {
+	margin: .75em 0;
+	margin-left: 1em;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+ul li {
+	display: block;
+	list-style: none;
+	padding: 10px;
+	background: #E0F7FA;
+	color: #333;
+	font-size: 1.5em;
+	text-align: center;
+}
+ul li:nth-child(even) {
+	background: #B2EBF2;
+}
+footer {
+	padding: 1em 0;
+	text-align: center;
+}
+footer a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.4);
+}
