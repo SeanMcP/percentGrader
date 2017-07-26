@@ -20,13 +20,17 @@ submitButton.addEventListener('click', function(e) {
   if (denom <= 0) {
     alert("Please choose a number greater than zero");
   } else if (denom > 1000){
-    alert("Too big to compute! Please choose a smaller number")
+    alert("Too many problems! Please choose a smaller number")
+  } else if (placeVal > 20) {
+    alert("Too many decimal places! Please choose a smaller number")
   } else {
     for (let i = denom; i >= 0; i--) {
       let calc = (denom / ogDenom) * 100;
       let roundedNum = calc.toFixed(placeVal);
       document.getElementById('output').innerHTML += "<li>" + denom + " / " + ogDenom + " or <strong>" + roundedNum + "%</strong>" + "</li>";
       denom = denom - 1;
+      divisor.value = "";
+      placeValue.value = "";
     }
   }
 });
