@@ -2,13 +2,17 @@ let divisor = document.getElementById('divisor');
 let placeValue = document.getElementById('placeValues');
 let button = document.getElementById('submitButton');
 
-// Gets height of <header> element
+// Gets height of header and footer element
 let headerHeight = document.getElementById("mainHeader").offsetHeight;
+let footerHeight = document.getElementById("mainFooter").offsetHeight;
 
 // Sets padding of <main> to height of <header>
 document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
+document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
+
 
 let ogState = document.getElementById("output");
+let hideInfo = document.getElementById("infoHide");
 
 submitButton.addEventListener('click', function(e) {
   let numerator = divisor.value;
@@ -16,6 +20,9 @@ submitButton.addEventListener('click', function(e) {
   let ogDenom = numerator;
 
   ogState.innerHTML = "";
+  hideInfo.innerHTML = "";
+  hideInfo.style.margin = 0;
+  hideInfo.style.padding = 0;
 
   if (numerator <= 0) {
     alert("Please choose a number greater than zero");
@@ -34,19 +41,3 @@ submitButton.addEventListener('click', function(e) {
     }
   }
 });
-
-
-// var nameInput = document.getElementById('nameInput');
-// var emailInput = document.getElementById('emailInput');
-// var signupButton = document.getElementById('signupButton');
-// signupButton.addEventListener('click', function(e) {
-//   var nameVal = nameInput.value;
-//   var emailVal = emailInput.value;
-//   if (nameVal && emailVal) {
-//     alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
-//     nameInput.value = "";
-//     emailInput.value = "";
-//   } else {
-//     alert('We would love for you to sign up, please provide both your name and email address.');
-//   }
-// });

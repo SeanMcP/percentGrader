@@ -19,6 +19,9 @@ body {
 strong {
 	font-weight: 700;
 }
+.alignCenter {
+	text-align: center;
+}
 header {
 	padding: 0.5em 2%;
 	background: #00ACC1;
@@ -87,7 +90,6 @@ form * {
 main {
 	background: #B2EBF2;
 	padding: default 0 0.5em;
-	margin-bottom: 8vh;
 	flex-grow: 1;
 }
 #infoHide {
@@ -140,16 +142,4 @@ footer img:hover {
 }
 footer img:active {
 	opacity: 0.3;
-}
-
-/*@media screen and (max-width: 400px) {*/
-	#logo {
-		font-size: 2.5em;
-	}
-	form, #infoHide {
-		font-size: 2em;
-	}
-	#submitButton {
-		min-width: 100px;
-	}
 }
