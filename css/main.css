@@ -143,7 +143,7 @@ footer img:active {
 	opacity: 0.3;
 }
 
-/*@media screen and (max-width: 400px) {*/
+/*@media screen and (max-width: 400px) {
 	#logo {
 		font-size: 2.5em;
 	}
@@ -153,4 +153,4 @@ footer img:active {
 	#submitButton {
 		min-width: 100px;
 	}
-}
+}*/
