@@ -7,6 +7,8 @@ body {
 	background: #B2EBF2;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
 }
 * {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -86,6 +88,7 @@ main {
 	background: #B2EBF2;
 	padding: default 0 0.5em;
 	margin-bottom: 8vh;
+	flex-grow: 1;
 }
 #infoHide {
 	margin: 1em;
