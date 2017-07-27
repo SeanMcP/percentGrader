@@ -11,24 +11,24 @@ document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
 let ogState = document.getElementById("output");
 
 submitButton.addEventListener('click', function(e) {
-  let denom = divisor.value;
+  let numerator = divisor.value;
   let placeVal = placeValue.value;
-  let ogDenom = denom;
+  let ogDenom = numerator;
 
   ogState.innerHTML = "";
 
-  if (denom <= 0) {
+  if (numerator <= 0) {
     alert("Please choose a number greater than zero");
-  } else if (denom > 1000){
+  } else if (numerator > 1000){
     alert("Too many problems! Please choose a smaller number")
   } else if (placeVal > 20) {
     alert("Too many decimal places! Please choose a smaller number")
   } else {
-    for (let i = denom; i >= 0; i--) {
-      let calc = (denom / ogDenom) * 100;
+    for (let i = numerator; i >= 0; i--) {
+      let calc = (numerator / ogDenom) * 100;
       let roundedNum = calc.toFixed(placeVal);
-      document.getElementById('output').innerHTML += "<li>" + denom + " / " + ogDenom + " or <strong>" + roundedNum + "%</strong>" + "</li>";
-      denom = denom - 1;
+      document.getElementById('output').innerHTML += "<li>" + numerator + " / " + ogDenom + " or <strong>" + roundedNum + "%</strong>" + "</li>";
+      numerator = numerator - 1;
       divisor.value = "";
       placeValue.value = "";
     }

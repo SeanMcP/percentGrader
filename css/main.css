@@ -1,5 +1,10 @@
+@viewport {
+	width: device-width;
+	initial-scale: 1;
+}
+
 body {
-	background: #333;
+	background: #B2EBF2;
 	margin: 0;
 	padding: 0;
 }
@@ -19,13 +24,13 @@ header {
 	position: fixed;
 	width: 96%;
 }
-#ad {
+/*#ad {
 	flex: 1 1 90%;
 	background: #666;
 	height: 100px;
 	margin: 0.25em 0 0;
 	display: none;
-}
+}*/
 #logo {
 	text-align: center;
 	font-size: 2.5em;
@@ -80,7 +85,7 @@ form * {
 main {
 	background: #B2EBF2;
 	padding: default 0 0.5em;
-	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+	margin-bottom: 8vh;
 }
 #infoHide {
 	margin: 1em;
@@ -107,12 +112,31 @@ ul li:nth-child(even) {
 	background: #B2EBF2;
 }
 footer {
-	padding: 1em 0;
+	height: 8vh;
 	text-align: center;
+	width: 100%;
+	background: #333;
+	position: fixed;
+	margin-top: 92vh;
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 footer a {
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.4);
+}
+footer img {
+	padding: 0.5vh 0 0;
+	height: 3vh;
+	opacity: 0.25;
+}
+footer img:hover {
+	opacity: 0.5;
+}
+footer img:active {
+	opacity: 0.3;
 }
 
 @media screen and (max-width: 400px) {
