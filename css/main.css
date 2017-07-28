@@ -117,12 +117,12 @@ ul li:nth-child(even) {
 	background: #B2EBF2;
 }
 footer {
-	height: 8vh;
+	height: 6vh;
 	text-align: center;
 	width: 100%;
 	background: #333;
 	position: fixed;
-	margin-top: 92vh;
+	margin-top: 94vh;
 	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
 	display: flex;
 	justify-content: center;
@@ -133,8 +133,8 @@ footer a {
 	color: rgba(255, 255, 255, 0.4);
 }
 footer img {
-	padding: 0.5vh 0 0;
-	height: 3vh;
+	padding: 0.25vh 0 0;
+	height: 2.5vh;
 	opacity: 0.25;
 }
 footer img:hover {
