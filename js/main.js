@@ -10,11 +10,10 @@ let footerHeight = document.getElementById("mainFooter").offsetHeight;
 document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
 document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
 
-
 let ogState = document.getElementById("output");
 let hideInfo = document.getElementById("infoHide");
 
-submitButton.addEventListener('click', function(e) {
+function genTable(){
   let numerator = divisor.value;
   let placeVal = placeValue.value;
   let ogDenom = numerator;
@@ -36,10 +35,12 @@ submitButton.addEventListener('click', function(e) {
     for (let i = numerator; i >= 0; i--) {
       let calc = (numerator / ogDenom) * 100;
       let roundedNum = calc.toFixed(placeVal);
-      document.getElementById('output').innerHTML += "<li>" + numerator + " / " + ogDenom + " or <strong>" + roundedNum + "%</strong>" + "</li>";
+      output.innerHTML += `<li> ${numerator} / ${ogDenom} or <strong>${roundedNum}%</strong></li>`
       numerator = numerator - 1;
       divisor.value = "";
       placeValue.value = "";
     }
   }
-});
+}
+
+submitButton.addEventListener('click', genTable);

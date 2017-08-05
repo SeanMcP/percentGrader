@@ -1,10 +1,5 @@
-@viewport {
-	width: device-width;
-	initial-scale: 1;
-}
-
 body {
-	background: #B2EBF2;
+	background: white;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -12,7 +7,6 @@ body {
 }
 * {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
-	color: #333;
 	margin: 0;
 	padding: 0;
 }
@@ -24,28 +18,25 @@ strong {
 }
 header {
 	padding: 0.5em 2%;
-	background: #00ACC1;
+	background: #283593;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 	position: fixed;
 	width: 96%;
 }
-/*#ad {
-	flex: 1 1 90%;
-	background: #666;
-	height: 100px;
-	margin: 0.25em 0 0;
-	display: none;
-}*/
+#headWrap {
+	max-width: 720px;
+	margin: 0 auto;
+}
 #logo {
 	text-align: center;
 	font-size: 2.5em;
 	padding: 0 0 0.1em;
 }
 #logo a {
-	font-family: 'Boogaloo', cursive;
+	font-family: 'Bree Serif', Georgia, serif;
 	font-weight: normal;
 	color: white;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	text-decoration: none;
 }
 #logo a:hover {
@@ -75,26 +66,32 @@ form * {
 #submitButton {
 	flex: 1 1 15%;
 	border: none;
-	background: #FFAB00;
+	background: linear-gradient(#9FA8DA, #7986CB);
 	color: white;
 	font-weight: 700;
-	transition: all 0.2s ease-in-out;
 	min-width: 50px;
 }
 #submitButton:hover {
-	background: #FFC400;
+	background: #9FA8DA;
 }
 #submitButton:active {
-	background: #FFAB00;
+	background: #7986CB;
 }
 main {
-	background: #B2EBF2;
 	padding: default 0 0.5em;
 	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
 }
 #infoHide {
 	margin: 1em;
-	padding: 0.5em 0;
+	padding: 1em 1em 0.5em;
+	max-width: 720px;
+	flex: 0 96%;
+	background: #e1e2e1;
+	border-radius: 5px;
+	color: #424242;
 }
 #infoHide li {
 	margin: .75em 0;
@@ -103,18 +100,19 @@ main {
 ul {
 	list-style: none;
 	padding: 0;
+	width: 100%;
 }
 ul li {
 	display: block;
 	list-style: none;
 	padding: 10px;
-	background: #E0F7FA;
-	color: #333;
+	background: #e1e2e1;
+	color: #616161;
 	font-size: 1.5em;
 	text-align: center;
 }
 ul li:nth-child(even) {
-	background: #B2EBF2;
+	background: #f5f5f5;
 }
 footer {
 	height: 6vh;
