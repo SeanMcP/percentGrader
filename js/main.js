@@ -44,4 +44,4 @@ function genTable(){
 }
 
 submitButton.addEventListener('click', genTable);
-submitButton.addEventListener('touchend', genTable);
+submitButton.addEventListener('touch', genTable);
