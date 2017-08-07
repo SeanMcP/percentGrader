@@ -44,3 +44,4 @@ function genTable(){
 }
 
 submitButton.addEventListener('click', genTable);
+submitButton.addEventListener('touchstart', genTable);
