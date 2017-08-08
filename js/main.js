@@ -43,6 +43,6 @@ function genTable(){
   }
 }
 
-var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+var touchEvent = 'ontouchstart' in window ? 'touch' : 'click';
 
 submitButton.addEventListener(touchEvent, genTable);
