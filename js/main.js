@@ -45,4 +45,5 @@ function genTable(){
 
 var touchEvent = 'ontouchstart' in window ? 'touch' : 'click';
 
-submitButton.addEventListener(touchEvent, genTable);
+submitButton.addEventListener('click', genTable);
+submitButton.addEventListener('touch', genTable);
