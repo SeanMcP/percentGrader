@@ -70,6 +70,7 @@ form * {
 	color: white;
 	font-weight: 700;
 	min-width: 50px;
+	cursor: pointer;
 }
 #submitButton:hover {
 	background: #9FA8DA;
