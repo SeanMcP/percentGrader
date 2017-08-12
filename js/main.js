@@ -1,7 +1,9 @@
+// Establish global element variables
 let divisor = document.getElementById('divisor');
 let placeValue = document.getElementById('placeValues');
 let button = document.getElementById('submitButton');
 let mainContent = document.getElementById('mainContent');
+let instructions = document.getElementById('instructions');
 
 // Gets height of header and footer element
 // let headerHeight = document.getElementById("mainHeader").offsetHeight;
@@ -10,8 +12,6 @@ let mainContent = document.getElementById('mainContent');
 // // Sets padding of <main> to height of <header>
 // document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
 // document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
-
-let hideInfo = document.getElementById("infoHide");
 
 let outputFlag = false;
 
@@ -29,7 +29,7 @@ function genTable(){
   } else {
 
     //Hide instructions and previously generated table
-    hideInfo.remove();
+    instructions.remove();
     // Remove old output, if present
     if(outputFlag){
       document.getElementById('output').remove();
