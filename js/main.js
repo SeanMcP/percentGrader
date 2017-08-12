@@ -1,9 +1,9 @@
 // Establish global element variables
-let divisor = document.getElementById('divisor');
+let myDivisor = document.getElementById('divisor');
 let placeValue = document.getElementById('placeValues');
-let button = document.getElementById('submitButton');
-let mainContent = document.getElementById('mainContent');
-let instructions = document.getElementById('instructions');
+let submitBtn = document.getElementById('submitButton');
+let main = document.getElementById('mainContent');
+let instructions = document.getElementById('info');
 
 // Gets height of header and footer element
 // let headerHeight = document.getElementById("mainHeader").offsetHeight;
@@ -16,7 +16,7 @@ let instructions = document.getElementById('instructions');
 let outputFlag = false;
 
 function genTable(){
-  let numerator = divisor.value;
+  let numerator = myDivisor.value;
   let placeVal = placeValue.value;
   let denominator = numerator;
 
@@ -35,13 +35,13 @@ function genTable(){
       document.getElementById('output').remove();
       outputFlag = false;
     }
-    divisor.value = "";
+    myDivisor.value = "";
     placeValue.value = "";
 
     // Create and append ouput ul
     let outputUl = document.createElement('ul');
     outputUl.id = 'output';
-    mainContent.appendChild(outputUl);
+    main.appendChild(outputUl);
     outputFlag = true;
 
     for (let i = numerator; i >= 0; i--) {
@@ -59,5 +59,5 @@ function genTable(){
 
 var touchEvent = 'ontouchstart' in window ? 'touch' : 'click';
 
-submitButton.addEventListener('click', genTable);
-submitButton.addEventListener('touchstart', genTable);
+submitBtn.addEventListener('click', genTable);
+submitBtn.addEventListener('touchstart', genTable);
