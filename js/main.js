@@ -3,12 +3,12 @@ let placeValue = document.getElementById('placeValues');
 let button = document.getElementById('submitButton');
 
 // Gets height of header and footer element
-let headerHeight = document.getElementById("mainHeader").offsetHeight;
-let footerHeight = document.getElementById("mainFooter").offsetHeight;
-
-// Sets padding of <main> to height of <header>
-document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
-document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
+// let headerHeight = document.getElementById("mainHeader").offsetHeight;
+// let footerHeight = document.getElementById("mainFooter").offsetHeight;
+//
+// // Sets padding of <main> to height of <header>
+// document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
+// document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
 
 let ogState = document.getElementById("output");
 let hideInfo = document.getElementById("infoHide");
