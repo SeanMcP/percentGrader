@@ -1,6 +1,7 @@
 let divisor = document.getElementById('divisor');
 let placeValue = document.getElementById('placeValues');
 let button = document.getElementById('submitButton');
+let mainContent = document.getElementById('mainContent');
 
 // Gets height of header and footer element
 // let headerHeight = document.getElementById("mainHeader").offsetHeight;
@@ -10,13 +11,14 @@ let button = document.getElementById('submitButton');
 // document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
 // document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
 
-let ogState = document.getElementById("output");
 let hideInfo = document.getElementById("infoHide");
+
+let outputFlag = false;
 
 function genTable(){
   let numerator = divisor.value;
   let placeVal = placeValue.value;
-  let ogDenom = numerator;
+  let denominator = numerator;
 
   if (numerator <= 0) {
     alert("Please choose a number greater than zero");
@@ -27,18 +29,30 @@ function genTable(){
   } else {
 
     //Hide instructions and previously generated table
-    ogState.innerHTML = "";
-    hideInfo.innerHTML = "";
-    hideInfo.style.margin = 0;
-    hideInfo.style.padding = 0;
+    hideInfo.remove();
+    // Remove old output, if present
+    if(outputFlag){
+      document.getElementById('output').remove();
+      outputFlag = false;
+    }
+    divisor.value = "";
+    placeValue.value = "";
+
+    // Create and append ouput ul
+    let outputUl = document.createElement('ul');
+    outputUl.id = 'output';
+    mainContent.appendChild(outputUl);
+    outputFlag = true;
 
     for (let i = numerator; i >= 0; i--) {
-      let calc = (numerator / ogDenom) * 100;
+      // Calculate percentage
+      let calc = (numerator / denominator) * 100;
       let roundedNum = calc.toFixed(placeVal);
-      output.innerHTML += `<li> ${numerator} / ${ogDenom} or <strong>${roundedNum}%</strong></li>`
-      numerator = numerator - 1;
-      divisor.value = "";
-      placeValue.value = "";
+      // Create and append li
+      let newLi = document.createElement('li');
+      newLi.innerHTML = `${numerator} / ${denominator} or <strong>${roundedNum}%</strong>`;
+      outputUl.appendChild(newLi);
+      numerator--;
     }
   }
 }
