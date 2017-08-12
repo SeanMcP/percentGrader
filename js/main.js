@@ -5,14 +5,6 @@ let submitBtn = document.getElementById('submitButton');
 let main = document.getElementById('mainContent');
 let instructions = document.getElementById('info');
 
-// Gets height of header and footer element
-// let headerHeight = document.getElementById("mainHeader").offsetHeight;
-// let footerHeight = document.getElementById("mainFooter").offsetHeight;
-//
-// // Sets padding of <main> to height of <header>
-// document.getElementById("mainContent").style.paddingTop = headerHeight + 'px';
-// document.getElementById("mainContent").style.paddingBottom = footerHeight + 'px';
-
 let outputFlag = false;
 
 function genTable(){
@@ -57,7 +49,4 @@ function genTable(){
   }
 }
 
-var touchEvent = 'ontouchstart' in window ? 'touch' : 'click';
-
 submitBtn.addEventListener('click', genTable);
-submitBtn.addEventListener('touchstart', genTable);
