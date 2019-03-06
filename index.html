@@ -13,31 +13,31 @@
 </head>
 
 <body>
-	<aside>
-		<h1><a href="/">Percent Grader</a></h1>
-		<label>
-			<div>Number of problems</div>
-			<input type="number" id="divisor" min="2" max="1000">
-		</label>
-		<label>
-			<div>Number of decimal places</div>
-			<input type="number" id="placeValues" min="0" max="20">
-		</label>
-		<button type="button" id="submitButton">Create table</button>
-	</aside>
-	<main>
-		<div id="info">
-			<strong>Instructions</strong>
-			<ol>
-				<li>First, set the total number of problems on the left</li>
-				<li>Then, set the number of decimal places on the right (default is 0)</li>
-				<li>Last, hit "Go" to see a table of percentage grades</li>
-			</ol>
-		</div>
-	</main>
-	<footer>
-		<a href="https://seanmcp.com">Made by Sean McP</a>
-	</footer>
+	<div id="App">
+		<aside id="SideBar">
+			<h1><a href="/">Percent Grader</a></h1>
+			<label>
+				<div>Number of problems</div>
+				<input type="number" id="divisor" min="2" max="1000">
+			</label>
+			<label>
+				<div>Number of decimal places</div>
+				<input type="number" id="placeValues" min="0" max="20">
+			</label>
+			<button type="button" id="submitButton">Create table</button>
+			<a href="https://seanmcp.com">Made by <b>Sean McP</b></a>
+		</aside>
+		<main>
+			<div id="info">
+				<strong>Instructions</strong>
+				<ol>
+					<li>First, set the total number of problems on the left</li>
+					<li>Then, set the number of decimal places on the right (default is 0)</li>
+					<li>Last, hit "Go" to see a table of percentage grades</li>
+				</ol>
+			</div>
+		</main>
+	</div>
 	<script src="./js/main.js"></script>
 </body>
 

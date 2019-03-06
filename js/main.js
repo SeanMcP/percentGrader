@@ -2,7 +2,7 @@
 let myDivisor = document.getElementById('divisor');
 let placeValue = document.getElementById('placeValues');
 let submitBtn = document.getElementById('submitButton');
-let main = document.getElementById('mainContent');
+let main = document.querySelector('main');
 let instructions = document.getElementById('info');
 
 let outputFlag = false;
