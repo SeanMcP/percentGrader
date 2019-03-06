@@ -7,14 +7,14 @@ let instructions = document.getElementById('info');
 
 let outputFlag = false;
 
-function genTable(){
+function genTable() {
   let numerator = myDivisor.value;
   let placeVal = placeValue.value;
   let denominator = numerator;
 
   if (numerator <= 0) {
     alert("Please choose a number greater than zero");
-  } else if (numerator > 1000){
+  } else if (numerator > 1000) {
     alert("Too many problems! Please choose a smaller number")
   } else if (placeVal > 20) {
     alert("Too many decimal places! Please choose a smaller number")
@@ -23,7 +23,7 @@ function genTable(){
     //Hide instructions and previously generated table
     instructions.remove();
     // Remove old output, if present
-    if(outputFlag){
+    if (outputFlag) {
       document.getElementById('output').remove();
       outputFlag = false;
     }
